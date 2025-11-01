@@ -2,3 +2,11 @@ venv/
 data/
 venv2/
 4.2.0
+runs/
+mlruns/
+**.pt
+**.h5
+**.json
+venv3/
+**/*.csv
+deep_learning/housing_x.csv
