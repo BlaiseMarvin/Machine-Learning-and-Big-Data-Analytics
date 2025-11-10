@@ -10,3 +10,4 @@ mlruns/
 venv3/
 **/*.csv
 deep_learning/housing_x.csv
+resource_images/
