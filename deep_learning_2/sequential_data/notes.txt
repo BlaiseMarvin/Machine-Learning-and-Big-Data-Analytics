@@ -1,0 +1,24 @@
+Handling Long Sequences:
+- Training RNNs on long sequences makes them unroll so much during time that they essentially become very deep neural networks.
+- Just like any other deep neural net, they too then suffer from the unstable gradients problem and may take forever to train, or training may 
+become unstable. Moreover when a RNN processes a long sequence, it gradually forgets its first inputs in the sequence. 
+
+Fighting the Unstable Gradients Problem:
+- Most of the techniques used to alleviate the unstable gradients problem in deep neural nets can also be used for RNNs: good parameter initialization,
+faster optimizers, dropout, etc.
+- However, non-saturating activation functions such as ReLU may not be as helpful here. They actually might lead the RNN to become more 
+unstable during training. Here's why - RNNs so deep, non saturating functions create the conditions for weights to keep growing/getting bigger -> gradients explode and training becomes unstable eventually.
+- What might help => using non saturating activation functions and gradient clipping
+
+- Moreover Batch Normalization also cannot be used as efficiently with RNNs as with deepforward nets. You cannot use it between timesteps but only between recurrent layers
+It is technically possible to add a BN layer to a memory cell - so that it will be applied at each timestep (both on the inputs for that timestep and on hidden state from previous timestep). However, 
+the same BN layer will be used at each timestep, with the same parameters (same mean and variance at inferene) regardless of the actual scale and offset of the inputs and hidden state. 
+In practice, this does not yield good results. BN horizontally doesn't work because we can't have the same mean and variance work for each timestep, and if we store them then weights explode
+Then BN horizontally for RNNs doesn't help that much.
+
+Another form of normalization that often works better with RNNs: layer normalization. LN: similar to BN, but instead of normalizing across the batch dimension, layer normalization 
+normalizes across the feature dimension. One advantage is that it computes the required statistics on the fly, at each timestep, independently
+for each instance and behaves the same way during training and testing(as opposed to BN) and it does not need to use exponential moving averages
+to estimate the feature statistics across all instances in the training set, like BN does. Like BN LN learns a scale and offset paramter for each 
+input. In an RNN, it is typically used right after the linear combination of the inputs and the hidden states. 
+

@@ -12,3 +12,4 @@ venv3/
 deep_learning/housing_x.csv
 resource_images/
 **.pyc
+**.DS_Store
