@@ -1,0 +1,20 @@
+Prompt Engineering:
+- u can get wildly different answers depending on how you phrase a question, with the while spending some time experimenting with various prompts
+- Different choices of words, give a few examples, suggest a character to imitate (e.g. you are a friendly.....)
+- Specify the output format and style, list pitfalls to avoid and so on.
+
+- Can even write a program to try out many possible combinations of prompt variants and eval them to find the best prompt for your task
+- There are even automatic prompt optimization (APO) techniques such as prompt tuning where a few learned embeddings are preprended to the inputs
+
+- can also breakdown complex tasks into multiple subtasks and prompt the llm once for each subtask - the output of one prompt feeding into another - prompt chaining
+
+- related technique - chain of thought prompting encourages the llm to think step by step rather than jumping to rhe first answer. 
+we can ask the llm explicitly (e.g. proceed step by step) or give it a few examples of the type of stp-by-step answer expect/ CoT prompting increases
+the reliability of the output, especially for reasoning tasks. 
+- pushing further we can make the llm explore multiple reasoning branches: approach is called tree-of-thoughts. works by asking the llm to reason step by step,
+and at each step we make it generate multiple options 
+
+- LLMs - hallucinations: to avoid this, one of the most important techniques is to add relevant context to the prompt on the fly. (RAG)
+
+
+- 
