@@ -19,3 +19,4 @@ my_imdb_model
 **/mistral/
 **/my_gpt2_sft_alpaca/
 **/my_bert/
+**.DS_Store
