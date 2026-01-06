@@ -8,3 +8,4 @@
 #### [Classical ML for Distributed Data Systems with Apache Spark](./spark-ml)
 #### More Classical ML
 - [Methods and Techniques](./hands-on-ml), [Ensemble Learning](./ensemble_learning), [Talking about ensemble learning, xgboost](./xgboost), [Unsupervised Learning](./unsupervised_learning), [Timeseries clustering](./time_series_clustering) and [General Clustering](./clustering)
+- [Time series anomaly detection and sarima forecasting](./classical_timeseries/)
