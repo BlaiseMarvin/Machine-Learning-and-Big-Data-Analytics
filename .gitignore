@@ -10,7 +10,6 @@ mlruns/
 venv3/
 **/*.csv
 deep_learning/housing_x.csv
-resource_images/
 **.pyc
 **.DS_Store
 .env
@@ -20,3 +19,4 @@ my_imdb_model
 **/my_gpt2_sft_alpaca/
 **/my_bert/
 **.DS_Store
+.DS_Store
