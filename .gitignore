@@ -20,3 +20,4 @@ my_imdb_model
 **/my_bert/
 **.DS_Store
 .DS_Store
+statistical_ml/siamese_networks/datasets/*
